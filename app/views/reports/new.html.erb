@@ -1,0 +1,30 @@
+<% provide(:title, 'New Sidewalk Report') %>
+<h1>Submit a new sidewalk report</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@report) do |f| %>
+      <%= render 'shared/report_error_messages' %>
+
+      <%= f.label :your_email %>
+      <%= f.email_field :reporter, class: 'form-control' %>
+
+      <%= f.label :address %>
+      <%= f.text_field :address, class: 'form-control' %>
+
+      <%= f.label :latitude %>
+      <%= f.number_field :lat, class: 'form-control', step: 0.000001 %>
+
+      <%= f.label :longitude %>
+      <%= f.number_field :lng, class: 'form-control', step: 0.000001 %>
+
+      <%= f.label :rating %>
+      <%= f.number_field :rating, class: 'form-control' %>
+
+      <%= f.label :description %>
+      <%= f.text_area :description, class: 'form-control' %>
+
+      <%= f.submit "Submit info", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reporter: MyString
+  address: MyString
+  lat: 9.99
+  lng: 9.99
+  rating: 
+  description: MyText
+
+two:
+  reporter: MyString
+  address: MyString
+  lat: 9.99
+  lng: 9.99
+  rating: 
+  description: MyText
