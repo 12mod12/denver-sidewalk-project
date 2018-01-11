@@ -1,0 +1,23 @@
+<script>
+  var mymap = L.map('mapid').setView([39.716584, -104.987482], 13);
+
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.streets',
+    accessToken: 'pk.eyJ1IjoiZGVudmVyc2lkZXdhbGtwcm9qZWN0IiwiYSI6ImNqYzlxNG1tNjAxaDQyeHF3YWZ3YmlnaTcifQ.hpqR5ud5Grw1VEQrBje8yQ'
+  }).addTo(mymap);
+</script>
+<div class="center jumbotron">
+  <h1>Denver Sidewalk Project</h1>
+
+  <h2>
+    Welcome to the Denver Sidewalk Project!
+  </h2>
+  <h2>
+    Tired of bad, broken, or non-existant sidewalks in Denver? You've come to the right place!
+  </h2>
+
+  <div id="mapid"></div>
+
+</div>
