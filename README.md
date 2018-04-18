@@ -1,24 +1,11 @@
-# README
+# The Denver Sidewalk Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### "*The ballet of the good city sidewalk never repeats itself from place to place, and in any one place is always replete with new improvisations.* - Jane Jacobs"
 
-Things you may want to cover:
+### Concept
 
-* Ruby version
+### Prereqs
 
-* System dependencies
+### Getting Started
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Contributing
