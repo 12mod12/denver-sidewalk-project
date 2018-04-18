@@ -2,5 +2,6 @@ language: ruby
 rvm:
  - 2.5.1
 
-before-install:
+#added to deal with travis bug in 2.5.1 cache missing rake
+before_install:
   - gem install bundler
