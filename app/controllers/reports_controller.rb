@@ -19,7 +19,7 @@ class ReportsController < ApplicationController
 
   def report_params
     params.require(:report).permit(:reporter, :address,
-        :lat, :lng, :rating, :description)
+                                   :lat, :lng, :rating, :description)
   end
 
 end
