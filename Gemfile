@@ -33,7 +33,11 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'simplecov', require: false, group: :test
+
+group :test do
+  gem 'factory_bot_rails', require: false
+  gem 'simplecov', require: false
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

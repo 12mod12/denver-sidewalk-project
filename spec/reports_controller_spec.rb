@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'spec_helper'
 
 class ReportsControllerTest < ActionDispatch::IntegrationTest
    test "the truth" do
