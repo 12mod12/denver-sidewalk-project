@@ -4,6 +4,10 @@ rvm:
 services:
   - postgresql
 
+env:
+  global:
+    - CC_TEST_REPORTER_ID=53fe30c493f1473b8ccf586a4d80d18a0b9e82b125cfd5de46800a8f08958c82
+
 #added to deal with travis bug in 2.5.1 cache missing rake
 before_install:
   - gem install bundler
@@ -11,3 +15,12 @@ before_install:
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
   - cp config/database.yml.travis config/database.yml
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+script:
+  - bundle exec rspec
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
