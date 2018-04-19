@@ -1,7 +1,12 @@
 language: ruby
 rvm:
  - 2.5.1
+services:
+  - postgresql
 
 #added to deal with travis bug in 2.5.1 cache missing rake
 before_install:
   - gem install bundler
+
+before_script:
+  - psql -c 'create database dsp_test;' -U postgres
