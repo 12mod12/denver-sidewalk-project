@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # A model for capturing sidewalk status reports
 #
 # @param [String] reporter A valid email used for contacting the reporter
