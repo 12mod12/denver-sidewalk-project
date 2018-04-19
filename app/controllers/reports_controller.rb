@@ -7,10 +7,10 @@ class ReportsController < ApplicationController
   def create
     @report = Report.new(report_params)
     if @report.save
-      flash[:info] = "Report receieved. Thanks for submitting."
+      flash[:info] = 'Report receieved. Thanks for submitting.'
       redirect_to root_url
     else
-      flash[:warn] = "Invalid report data, please submit again."
+      flash[:warn] = 'Invalid report data, please submit again.'
       render 'new'
     end
   end
@@ -18,7 +18,8 @@ class ReportsController < ApplicationController
   private
 
   def report_params
-    params.require(:report).permit(:reporter, :address, :lat, :lng, :rating, :description)
+    params.require(:report).permit(:reporter, :address,
+        :lat, :lng, :rating, :description)
   end
 
 end
