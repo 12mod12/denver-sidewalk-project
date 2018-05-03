@@ -15,6 +15,11 @@ class ReportsController < ApplicationController
     end
   end
 
+  def index
+    @reports = Report.all
+    render json: @reports
+  end
+
   private
 
   def report_params
