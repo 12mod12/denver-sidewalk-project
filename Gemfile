@@ -37,6 +37,7 @@ gem 'jbuilder', '~> 2.5'
 group :test do
   gem 'factory_bot_rails', require: false
   gem 'simplecov', require: false
+  gem 'database_cleaner', require: false
 end
 
 group :development, :test do
