@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'jquery-rails'
 
 group :test do
   gem 'factory_bot_rails', require: false
